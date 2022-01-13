@@ -1,0 +1,50 @@
+{
+  "name": "kryptokurrency",
+  "version": "1.0.0",
+  "description": "A crypto currency platform to view information about most comun cryptos",
+  "main": "src/index.js",
+  "repository": "https://github.com/franklingrab/kryptokurrency",
+  "author": "franklingrab <franklinserif@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack --config ./config/webpack.prod.js",
+    "start": "webpack serve --config ./config/webpack.dev.js"
+  },
+  "dependencies": {
+    "core-js": "^3.20.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "@types/node": "^17.0.8",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.6",
+    "prettier": "2.5.1",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.5.4",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3",
+    "webpack-merge": "^5.8.0"
+  },
+  "browsersList": "> 0.25%, not dead, not ie 11"
+}

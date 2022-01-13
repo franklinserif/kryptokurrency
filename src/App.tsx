@@ -1,0 +1,8 @@
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+
+function App() {
+  return <div>Hi there...</div>;
+}
+
+export default App;
