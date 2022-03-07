@@ -1,7 +1,9 @@
 import React from 'react';
+import ThemeProvider from './stores/themeProvider/ThemeProvider';
+import Button from './components/Button/Button';
 
 function App() {
-  return <div>Hi there... again again</div>;
+  return <ThemeProvider>Button</ThemeProvider>;
 }
 
 export default App;

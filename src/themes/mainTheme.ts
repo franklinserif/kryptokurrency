@@ -28,4 +28,4 @@ const mainTheme: DefaultTheme = {
   },
 };
 
-export default mainTheme;
+export { mainTheme };
