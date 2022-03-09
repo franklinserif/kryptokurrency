@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/no-extraneous-dependencies */
+
+/* eslint-disable react/function-component-definition */
+/* eslint-disable import/extensions */
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-// eslint-disable-next-line import/extensions
+// eslint-disable-next-line import/no-unresolved
+
 import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
