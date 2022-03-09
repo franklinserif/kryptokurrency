@@ -6,6 +6,8 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-viewport',
     '@storybook/addon-a11y',
+    '@storybook/addon-actions',
+    '@storybook/addon-docs',
   ],
   framework: '@storybook/react',
 };
