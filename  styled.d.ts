@@ -4,8 +4,6 @@ import 'styled-components';
 // and extend them!
 declare module 'styled-components' {
   export interface DefaultTheme {
-    borderRadius: string;
-
     colors: {
       blue: {
         100: string;
@@ -27,6 +25,23 @@ declare module 'styled-components' {
       };
       black: string;
       white: string;
+    };
+    fontSize: {
+      100: number;
+      200: number;
+      300: number;
+      400: number;
+      500: number;
+      600: number;
+      700: number;
+      800: number;
+      900: number;
+    };
+    fontWeight: {
+      300: number;
+      500: number;
+      600: number;
+      700: number;
     };
   }
 }

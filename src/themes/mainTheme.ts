@@ -2,8 +2,6 @@
 import { DefaultTheme } from 'styled-components';
 
 const mainTheme: DefaultTheme = {
-  borderRadius: '5px',
-
   colors: {
     blue: {
       100: '#e5e5ff',
@@ -25,6 +23,23 @@ const mainTheme: DefaultTheme = {
     },
     black: '#000',
     white: '#fff',
+  },
+  fontSize: {
+    100: 12,
+    200: 15,
+    300: 18,
+    400: 21,
+    500: 24,
+    600: 27,
+    700: 30,
+    800: 33,
+    900: 36,
+  },
+  fontWeight: {
+    300: 300,
+    500: 500,
+    600: 600,
+    700: 700,
   },
 };
 
