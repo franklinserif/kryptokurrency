@@ -6,10 +6,11 @@ import { StyledButton } from './button.styled';
  * @param {Object} props
  * @param {string} props.children
  * @param {string} props.variant
- * @param {handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void} handleClick
- * @returns
+ * @param {(event: React.MouseEvent<HTMLButtonElement>) => void} props.handleClick
+ * @returns {JSX.Element}
  */
-const Button = ({ children, variant, handleClick }: ButtonPropsTypes) => {
+const Button: React.FC<ButtonPropsTypes> = (props: ButtonPropsTypes): JSX.Element => {
+  const { children, variant, handleClick } = props;
   return (
     <StyledButton variant={variant} onClick={handleClick}>
       {children}
