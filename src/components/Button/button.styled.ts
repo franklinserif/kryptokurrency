@@ -15,7 +15,7 @@ const basicStyles = css<StyledButtonProps>`
   font-size: ${({ theme }) => theme.fontSize[200]}px;
   font-weight: ${({ theme }) => theme.fontWeight[300]};
   color: ${(props) => props.theme.colors.white};
-  padding: 0.8rem 1.7rem;
+  padding: 0.7rem 1.7rem;
   border: none;
   transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   &:hover {
@@ -38,11 +38,44 @@ const secondaryButton = css<StyledButtonProps>`
   background-color: ${({ theme }) => theme.colors.gray[800]};
 `;
 
-const tertiaryButton = css<StyledButtonProps>``;
+const tertiaryButton = css<StyledButtonProps>`
+  ${basicStyles}
+  background-color: transparent;
+  border: 1px solid ${({ theme }) => theme.colors.blue[700]};
+  color: ${({ theme }) => theme.colors.blue[700]};
 
-const dangerButton = css<StyledButtonProps>``;
+  &:hover {
+    color: ${({ theme }) => theme.colors.blue[500]};
+    border: 1px solid ${({ theme }) => theme.colors.blue[500]};
+  }
 
-const ghostButton = css<StyledButtonProps>``;
+  &:active {
+    color: ${({ theme }) => theme.colors.blue[500]};
+    border: 1px solid ${({ theme }) => theme.colors.blue[500]};
+  }
+`;
+
+const dangerButton = css<StyledButtonProps>`
+  ${basicStyles}
+  background-color: ${({ theme }) => theme.colors.danger};
+`;
+
+const ghostButton = css<StyledButtonProps>`
+  ${basicStyles}
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.blue[700]};
+
+  &:hover {
+    box-shadow: none;
+    color: ${({ theme }) => theme.colors.blue[500]};
+  }
+
+  &:active {
+    transform: scale(0.9);
+    color: ${({ theme }) => theme.colors.blue[500]};
+    box-shadow: none;
+  }
+`;
 
 export const StyledButton = styled.button<StyledButtonProps>`
   ${({ variant }) =>

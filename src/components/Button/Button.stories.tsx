@@ -28,8 +28,25 @@ PrimaryButton.args = {
 };
 
 export const SecondaryButton = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 SecondaryButton.args = {
   variant: 'secondary-button',
+  children: 'Button',
+};
+
+export const TertiaryButton = Template.bind({});
+TertiaryButton.args = {
+  variant: 'tertiary-button',
+  children: 'Button',
+};
+
+export const DangerButton = Template.bind({});
+DangerButton.args = {
+  variant: 'danger-button',
+  children: 'Button',
+};
+
+export const GhostButton = Template.bind({});
+GhostButton.args = {
+  variant: 'ghost-button',
   children: 'Button',
 };
