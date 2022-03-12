@@ -4,7 +4,6 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-
   /** The testRegex tells Jest to look for tests in any __tests__ folder AND also any
    * files anywhere that use the (.test|.spec).(ts|tsx) extension
    * e.g. checkbox.test.tsx etc.
@@ -19,5 +18,5 @@ module.exports = {
 
   // Setup Enzyme
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupFilesAfterEnv: ['<rootDir>/setupEnzyme.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/__test__/setupEnzyme.ts'],
 };

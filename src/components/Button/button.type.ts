@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { DefaultTheme } from 'styled-components';
 
 type ButtonPropsTypes = {
   children: string;

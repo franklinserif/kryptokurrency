@@ -1,3 +1,4 @@
+import 'jest-styled-components';
 import { createSerializer } from 'enzyme-to-json';
 
 import Enzyme from 'enzyme';

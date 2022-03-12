@@ -1,16 +1,24 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
 import Button from './Button';
-import '@testing-library/jest-dom';
-import { shallow } from 'enzyme';
+import ThemeProvideMock from '../../__mocks__/ThemeProviderMock';
+import { mount } from 'enzyme';
 
 describe('Button component', () => {
-  it('should render a Primary Button', () => {
-    const wrapper = shallow(
+  const button = mount(
+    <ThemeProvideMock>
       <Button variant="primary-button" handleClick={() => {}}>
-        {'Button'}
-      </Button>,
-    );
+        Button
+      </Button>
+    </ThemeProvideMock>,
+  );
+  it('should render a Primary Button', () => {
+    expect(button).toBeTruthy();
+  });
 
-    expect(wrapper).toBeTruthy();
+  it('should have a Button text', () => {
+    expect(button.find('Button').text()).toEqual('Button');
   });
 });
