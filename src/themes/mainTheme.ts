@@ -25,6 +25,7 @@ const mainTheme: DefaultTheme = {
       500: '#6f6f6f',
       600: '#8d8d8d',
       700: '#a8a8a8',
+      800: '#393939',
     },
     dark: '#161616',
     white: '#fff',

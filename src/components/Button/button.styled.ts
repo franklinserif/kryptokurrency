@@ -1,20 +1,48 @@
 import styled, { DefaultTheme, css } from 'styled-components';
+import { themeContext } from '../../stores/themeProvider/ThemeProvider';
 
 type StyledButtonProps = {
   theme: DefaultTheme;
-  variant: 'primary-button' | 'secondary-button' | 'link-button';
+  variant:
+    | 'primary-button'
+    | 'secondary-button'
+    | 'tertiary-button'
+    | 'danger-button'
+    | 'ghost-button';
 };
 
-const primaryButton = css<StyledButtonProps>`
-  background-color: ${(props) => props.theme.colors.blue[300]};
-  font-size: ${(props) => props.theme.fontSize[200]}px;
+const basicStyles = css<StyledButtonProps>`
+  font-size: ${({ theme }) => theme.fontSize[200]}px;
+  font-weight: ${({ theme }) => theme.fontWeight[300]};
   color: ${(props) => props.theme.colors.white};
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 1.7rem;
+  border: none;
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
 `;
 
-const secondaryButton = css<StyledButtonProps>``;
+const primaryButton = css<StyledButtonProps>`
+  ${basicStyles};
+  background-color: ${({ theme }) => theme.colors.blue[400]};
+`;
 
-const linkButton = css<StyledButtonProps>``;
+const secondaryButton = css<StyledButtonProps>`
+  ${basicStyles}
+  background-color: ${({ theme }) => theme.colors.gray[800]};
+`;
+
+const tertiaryButton = css<StyledButtonProps>``;
+
+const dangerButton = css<StyledButtonProps>``;
+
+const ghostButton = css<StyledButtonProps>``;
 
 export const StyledButton = styled.button<StyledButtonProps>`
   ${({ variant }) =>
@@ -22,7 +50,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
       ? primaryButton
       : variant === 'secondary-button'
       ? secondaryButton
-      : variant === 'link-button'
-      ? linkButton
-      : ''};
+      : variant === 'tertiary-button'
+      ? tertiaryButton
+      : variant === 'danger-button'
+      ? dangerButton
+      : variant === 'ghost-button'
+      ? ghostButton
+      : primaryButton};
 `;

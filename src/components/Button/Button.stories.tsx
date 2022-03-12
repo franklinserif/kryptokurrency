@@ -20,9 +20,16 @@ export default {
 // eslint-disable-next-line react/function-component-definition
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const PrimaryButton = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+PrimaryButton.args = {
   variant: 'primary-button',
+  children: 'Button',
+};
+
+export const SecondaryButton = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+SecondaryButton.args = {
+  variant: 'secondary-button',
   children: 'Button',
 };
