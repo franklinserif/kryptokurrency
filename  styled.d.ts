@@ -14,7 +14,12 @@ declare module 'styled-components' {
         600: string;
         700: string;
       };
+      danger: string;
+      warning: string;
+      information: string;
+      success: string;
       gray: {
+        10: string;
         100: string;
         200: string;
         300: string;
@@ -23,7 +28,7 @@ declare module 'styled-components' {
         600: string;
         700: string;
       };
-      black: string;
+      dark: string;
       white: string;
     };
     fontSize: {
