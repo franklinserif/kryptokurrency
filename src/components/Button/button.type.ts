@@ -3,7 +3,7 @@ import { DefaultTheme } from 'styled-components';
 
 type ButtonPropsTypes = {
   children: string;
-  variant: string;
+  variant: 'primary-button' | 'secondary-button' | 'link-button';
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 

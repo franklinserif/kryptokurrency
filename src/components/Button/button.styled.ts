@@ -2,7 +2,7 @@ import styled, { DefaultTheme, css } from 'styled-components';
 
 type StyledButtonProps = {
   theme: DefaultTheme;
-  variant: string;
+  variant: 'primary-button' | 'secondary-button' | 'link-button';
 };
 
 const primaryButton = css<StyledButtonProps>`
@@ -12,6 +12,17 @@ const primaryButton = css<StyledButtonProps>`
   padding: 0.5rem 1.5rem;
 `;
 
+const secondaryButton = css<StyledButtonProps>``;
+
+const linkButton = css<StyledButtonProps>``;
+
 export const StyledButton = styled.button<StyledButtonProps>`
-  ${(props) => props.variant === 'primary-button' && primaryButton};
+  ${({ variant }) =>
+    variant === 'primary-button'
+      ? primaryButton
+      : variant === 'secondary-button'
+      ? secondaryButton
+      : variant === 'link-button'
+      ? linkButton
+      : ''};
 `;

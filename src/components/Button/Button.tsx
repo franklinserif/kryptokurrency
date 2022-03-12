@@ -5,7 +5,7 @@ import { StyledButton } from './button.styled';
  * Button Components
  * @param {Object} props
  * @param {string} props.children
- * @param {string} props.variant
+ * @param {string} props.variantprimary primary-button | secondary-button | link-button
  * @param {(event: React.MouseEvent<HTMLButtonElement>) => void} props.handleClick
  * @returns {JSX.Element}
  */
