@@ -18,6 +18,10 @@ describe('Button component', () => {
     expect(button).toBeTruthy();
   });
 
+  it('Should render a Primery Button', () => {
+    expect(button.length).toEqual(1);
+  });
+
   it('should have a Button text', () => {
     expect(button.find('Button').text()).toEqual('Button');
   });
