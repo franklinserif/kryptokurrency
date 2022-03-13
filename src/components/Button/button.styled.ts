@@ -1,5 +1,4 @@
 import styled, { DefaultTheme, css } from 'styled-components';
-import { themeContext } from '../../stores/themeProvider/ThemeProvider';
 
 type StyledButtonProps = {
   theme: DefaultTheme;

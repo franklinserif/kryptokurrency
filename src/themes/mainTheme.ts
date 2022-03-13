@@ -47,6 +47,11 @@ const mainTheme: DefaultTheme = {
     600: 600,
     700: 700,
   },
+  controlSizes: {
+    sm: '0.3rem 0.7rem',
+    lg: '0.7rem 1.5rem',
+    xl: '1rem 2rem',
+  },
 };
 
 export { mainTheme };

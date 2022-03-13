@@ -17,6 +17,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@carbon/icons-react": "^10.48.0",
     "@storybook/react": "^6.4.19",
     "@types/styled-components": "^5.1.23",
     "core-js": "^3.20.2",
@@ -42,6 +43,7 @@
     "@storybook/addon-viewport": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "@testing-library/jest-dom": "^5.16.2",
+    "@types/carbon__icons-react": "^10.31.2",
     "@types/enzyme": "^3.10.11",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.8",

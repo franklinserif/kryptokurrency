@@ -49,5 +49,10 @@ declare module 'styled-components' {
       600: number;
       700: number;
     };
+    controlSizes: {
+      sm: string;
+      lg: string;
+      xl: string;
+    };
   }
 }
