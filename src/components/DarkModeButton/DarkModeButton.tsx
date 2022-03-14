@@ -7,6 +7,8 @@ import { useTransition, animated } from 'react-spring';
  *  Dark Mode button, change the state of the dark mode
  *  when user click the button with icon animated by react-spring
  *  useTransition
+ * @param {Object} props
+ * @param {(e: React.MouseEvent<HTMLButtonElement>, setDarkMode: React.Dispatch<React.SetStateAction<boolean>>) => void} props.handlDarkModeChange
  * @returns {JSX.Element}
  */
 const DarkModeButton: React.FC<DarkModeButonPropsType> = (
