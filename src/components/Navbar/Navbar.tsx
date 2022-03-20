@@ -20,7 +20,9 @@ const Navbar: React.FC<NavbarPropsType> = ({ children }: NavbarPropsType): JSX.E
 
   return (
     <StyledNavbar>
-      <Logo />
+      <section className="logo-container">
+        <Logo />
+      </section>
 
       <section className="navigation">
         {children}

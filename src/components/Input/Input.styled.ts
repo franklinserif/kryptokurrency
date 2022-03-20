@@ -10,9 +10,10 @@ type StyledInputProps = {
 const StyledIcon = css`
   .input-icon {
     position: absolute;
-    height: 20px;
-    left: 3px;
-    top: 25%;
+    height: 1.4rem;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 `;
 

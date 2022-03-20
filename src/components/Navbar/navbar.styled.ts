@@ -6,20 +6,50 @@ type StyleNavbarPropsType = {
 
 export const StyledNavbar = styled.nav<StyleNavbarPropsType>`
   & {
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-container {
+    z-index: 999;
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.white};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[10]};
+    padding: 0.5rem 0;
+  }
+
+  .logo-container span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container span .logo {
+    width: 15%;
   }
 
   & .navigation {
-    position: relative;
-    top: 20px;
+    position: absolute;
+    top: 60px;
     width: 100%;
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    background-color: ${({ theme }) => theme.colors.white};
+    box-shadow: 10px 30px 30px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in;
+    transform: translateY(0px);
   }
 
-  & .navigation-menu {
-    width: 100%;
-    overflow: visible;
+  .navigation-active {
+    transform: translateY(0px);
+  }
+
+  ul {
     list-style: none;
   }
 
@@ -27,85 +57,80 @@ export const StyledNavbar = styled.nav<StyleNavbarPropsType>`
     padding: 0.5rem 0;
   }
 
-  & .menu-item a {
+  a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.gray[500]};
-    font-weight: ${({ theme }) => theme.fontWeight[300]};
-    transition: all 0.2s ease;
-    letter-spacing: 0.1rem;
   }
 
-  & .menu-item a:hover {
+  a:hover {
     color: ${({ theme }) => theme.colors.blue[300]};
   }
 
-  & .navigation-options {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  & .navigation-options span,
+  & .navigation-options input,
+  & .navigation-options button {
     width: 100%;
   }
 
-  & .navigation-options > * {
-    width: 100%;
-    margin: 0.4rem;
-  }
-
-  & .navigation-options > span {
+  & .navigation-options button {
+    margin-top: 1rem;
     width: 100%;
   }
 
-  & span input {
-    width: 99%;
-  }
-
-  @media (min-width: 767px) {
+  @media (min-width: 900px) {
     & {
-      display: flex;
-      justify-content: space-between;
-      box-shadow: 1px 5px 50px rgba(0, 0, 0, 0.1);
+      flex-direction: row;
+      flex-wrap: nowrap;
       padding: 1rem;
     }
 
-    & .logo {
+    .logo-container {
       width: 20%;
+      border: none;
     }
 
     & .navigation {
       position: static;
+      width: 80%;
+      background-color: transparent;
+      box-shadow: none;
       display: flex;
-      justify-content: space-around;
-      width: 65%;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
     }
 
-    & .navigation-menu {
-      position: static;
+    & .navigation .navigation-menu {
+      margin-left: auto;
+      margin-right: 2rem;
+      width: 100%;
+      max-width: 220px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 50%;
-      max-width: 250px;
-      margin-left: auto;
-      margin-right: 2rem;
     }
-
     & .navigation-options {
-      position: static;
+      width: 35%;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 50%;
-      max-width: 370px;
+      justify-content: center;
+      align-items: center;
+    }
+    & .navigation-options span {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
     }
 
-    & .navigation-options > span {
+    & .navigation-options span input {
       width: 100%;
+      max-width: 450px;
     }
 
-    & span input {
-      min-width: 220px;
+    & .navigation-options button {
+      margin: 0;
+      width: 45%;
     }
   }
 `;
