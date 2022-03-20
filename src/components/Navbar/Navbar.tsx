@@ -20,22 +20,23 @@ const Navbar: React.FC<NavbarPropsType> = ({ children }: NavbarPropsType): JSX.E
 
   return (
     <StyledNavbar>
-      {children}
-
       <Logo />
 
-      <section className="navigation-options">
-        <Input
-          type="search"
-          variant="lg"
-          placeholder="search"
-          light={true}
-          value={search}
-          handleChange={handleChange}
-        >
-          <Search32 aria-label="search" className="input-icon" />
-        </Input>
-        <Button variant="primary-button">Settings</Button>
+      <section className="navigation">
+        {children}
+        <section className="navigation-options">
+          <Input
+            type="search"
+            variant="lg"
+            placeholder="search"
+            light={true}
+            value={search}
+            handleChange={handleChange}
+          >
+            <Search32 aria-label="search" className="input-icon" />
+          </Input>
+          <Button variant="primary-button">Settings</Button>
+        </section>
       </section>
     </StyledNavbar>
   );
