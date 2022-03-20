@@ -8,7 +8,7 @@ type ButtonPropsTypes = {
     | 'tertiary-button'
     | 'danger-button'
     | 'ghost-button';
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export default ButtonPropsTypes;

@@ -9,7 +9,8 @@ import { Blockchain32 } from '@carbon/icons-react';
 const Logo: React.FC = (): JSX.Element => {
   return (
     <StyledLogo>
-      <Blockchain32 aria-label="Logo" className="Logo" />
+      <Blockchain32 aria-label="Logo" className="logo" />
+      KryptoKurrency
     </StyledLogo>
   );
 };

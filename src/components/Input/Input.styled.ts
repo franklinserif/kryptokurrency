@@ -12,7 +12,7 @@ const StyledIcon = css`
     position: absolute;
     height: 20px;
     left: 3px;
-    top: 1px;
+    top: 25%;
   }
 `;
 
@@ -26,7 +26,7 @@ const StyledInputWrapper = styled.span<StyledInputProps>`
         ? theme.controlSizes.lg
         : theme.controlSizes.xl};
     transition: outline 0.5s ease;
-    border: none;
+    border: 1px solid white;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray[600]};
     background-color: ${({ light, theme }) => (light ? '' : theme.colors.gray[10])};
     ${({ icon }) => icon && 'padding-left: 2.5rem'};
@@ -36,7 +36,7 @@ const StyledInputWrapper = styled.span<StyledInputProps>`
 
   & input:focus {
     outline: 1px solid ${({ theme }) => theme.colors.blue[500]};
-    border: none;
+    border: 1px solid white;
   }
 `;
 
