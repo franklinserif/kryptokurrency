@@ -28,8 +28,11 @@ declare module 'styled-components' {
         600: string;
         700: string;
         800: string;
+        900: string;
+        1000: string;
       };
       dark: string;
+      black: string;
       white: string;
     };
     fontSize: {
@@ -45,6 +48,7 @@ declare module 'styled-components' {
     };
     fontWeight: {
       300: number;
+      400: number;
       500: number;
       600: number;
       700: number;

@@ -26,8 +26,11 @@ const mainTheme: DefaultTheme = {
       600: '#8d8d8d',
       700: '#a8a8a8',
       800: '#393939',
+      900: '#e0e0e0',
+      1000: '#e5e5e5',
     },
     dark: '#161616',
+    black: '#161616',
     white: '#fff',
   },
   fontSize: {
@@ -43,6 +46,7 @@ const mainTheme: DefaultTheme = {
   },
   fontWeight: {
     300: 300,
+    400: 400,
     500: 500,
     600: 600,
     700: 700,
