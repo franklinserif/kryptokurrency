@@ -12,16 +12,23 @@ export const StyledNavbar = styled.nav<StyleNavbarPropsType>`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 0.5rem;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
   }
 
   .logo-container {
     z-index: 999;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: ${({ theme }) => theme.colors.white};
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray[10]};
     padding: 0.5rem 0;
+  }
+
+  .logo-container > *:nth-child(2) {
+    margin-left: auto;
   }
 
   .logo-container span {
@@ -41,12 +48,16 @@ export const StyledNavbar = styled.nav<StyleNavbarPropsType>`
     padding: 0.5rem 1rem 1.5rem 1rem;
     background-color: ${({ theme }) => theme.colors.white};
     box-shadow: 10px 30px 30px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in;
-    transform: translateY(0px);
+    transition: transform 0.1s ease-in, opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateY(-50px);
+    opacity: 0;
+    visibility: hidden;
   }
 
-  .navigation-active {
+  .navigation--active {
+    visibility: visible;
     transform: translateY(0px);
+    opacity: 1;
   }
 
   ul {
@@ -89,6 +100,10 @@ export const StyledNavbar = styled.nav<StyleNavbarPropsType>`
       border: none;
     }
 
+    .logo-container > *:nth-child(2) {
+      display: none;
+    }
+
     & .navigation {
       position: static;
       width: 80%;
@@ -98,6 +113,9 @@ export const StyledNavbar = styled.nav<StyleNavbarPropsType>`
       justify-content: center;
       align-items: center;
       padding: 0;
+      transform: translateY(0px);
+      opacity: 1;
+      visibility: visible;
     }
 
     & .navigation .navigation-menu {

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { StyledNavbar } from './navbar.styled';
 import NavbarPropsType from './navbar.type';
-import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import Logo from '../Logo/Logo';
 import Input from '../Input/Input';
 import { Search32 } from '@carbon/icons-react';
+import HamburgerButton from '../Hamburgerbutton/HamburgerButton';
 
 /**
  * Navigation bar
@@ -13,19 +13,25 @@ import { Search32 } from '@carbon/icons-react';
  */
 const Navbar: React.FC<NavbarPropsType> = ({ children }: NavbarPropsType): JSX.Element => {
   const [search, setSearch] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     console.log(event);
+  };
+
+  const showMenu = () => {
+    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
   return (
     <StyledNavbar>
       <section className="logo-container">
         <Logo />
+        <HamburgerButton handleClick={() => showMenu()} />
       </section>
 
-      <section className="navigation">
-        {children}
+      <section className={`navigation ${isMenuOpen ? 'navigation--active' : ''}`}>
+        <ul className="navigation-menu">{children}</ul>
         <section className="navigation-options">
           <Input
             type="search"

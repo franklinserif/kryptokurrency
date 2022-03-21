@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 export const NavigationBar = Template.bind({});
 NavigationBar.args = {
   children: (
-    <ul className="navigation-menu">
+    <>
       <li className="menu-item">
         <a href="#">Coins</a>
       </li>
@@ -22,6 +22,6 @@ NavigationBar.args = {
       <li className="menu-item">
         <a href="#">Swap</a>
       </li>
-    </ul>
+    </>
   ),
 };

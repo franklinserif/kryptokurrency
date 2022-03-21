@@ -7,6 +7,11 @@ type StyledHamburgerButtonPropsType = {
 
 export const StyledHamburgerButton = styled.button<StyledHamburgerButtonPropsType>`
   background-color: transparent;
+  & {
+    display: flex;
+    align-items: center;
+  }
+
   & button {
     display: inline-block;
     cursor: pointer;
@@ -17,12 +22,13 @@ export const StyledHamburgerButton = styled.button<StyledHamburgerButtonPropsTyp
   .bar1,
   .bar2,
   .bar3 {
+    margin-top: 1px;
     width: 35px;
     height: 5px;
     background-color: ${({ theme }) => theme.colors.gray[400]};
     margin: 6px 0;
     transition: 0.4s;
-    border-radius: 5px;
+    border-radius: 20px;
   }
 
   .change .bar1 {
