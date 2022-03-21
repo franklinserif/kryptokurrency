@@ -7,7 +7,7 @@ type StyledLogoPropsType = {
 const StyledLogo = styled.span<StyledLogoPropsType>`
   & {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-size: ${({ theme }) => theme.fontSize[300]}px;
     color: ${({ theme }) => theme.colors.dark};
@@ -22,7 +22,7 @@ const StyledLogo = styled.span<StyledLogoPropsType>`
 
   .logo {
     width: 100%;
-    max-width: 150px;
+    max-width: 40px;
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
