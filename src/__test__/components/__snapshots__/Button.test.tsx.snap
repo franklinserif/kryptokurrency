@@ -1,3 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`button Snapshot test UI of Button component 1`] = `[Function]`;
+exports[`Button component sould render correctly in debug mode 1`] = `
+.c0 {
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  padding: 0.7rem 1.7rem;
+  border: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.215,0.61,0.355,1);
+  transition: all 0.2s cubic-bezier(0.215,0.61,0.355,1);
+  background-color: #2b7dfa;
+}
+
+.c0:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+}
+
+.c0:active {
+  box-shadow: inset 10px 10px 10px rgba(0,0,0,0.1);
+}
+
+<button
+  className="c0"
+  onClick={[Function]}
+>
+  Text
+</button>
+`;
