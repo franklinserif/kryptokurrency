@@ -25,7 +25,7 @@ const DataTable: React.FC<DataTablePropsType> = ({
         </thead>
         <tbody className="table-body">
           {data.map((item) => (
-            <tr>
+            <tr className="">
               {Object.entries(item).map(([key, prop]) => (
                 <td key={key}>
                   <Link to="/">{prop}</Link>
