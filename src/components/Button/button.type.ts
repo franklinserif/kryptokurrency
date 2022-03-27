@@ -1,13 +1,14 @@
 import React, { ReactNode } from 'react';
 
 type ButtonPropsTypes = {
-  children: string;
+  children: string | ReactNode;
   variant:
     | 'primary-button'
     | 'secondary-button'
     | 'tertiary-button'
     | 'danger-button'
-    | 'ghost-button';
+    | 'ghost-button'
+    | 'icon-button';
   handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 

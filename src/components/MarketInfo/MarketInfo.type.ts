@@ -1,5 +1,6 @@
 type MarketInfoPropsType = {
   title: string;
+  dark: boolean;
   data: string;
 };
 

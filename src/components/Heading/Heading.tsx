@@ -3,10 +3,10 @@ import HeadingPropsType from './Heading.type';
 import { StyledHeading } from './heading.styled';
 
 const Heading: React.FC<HeadingPropsType> = (props: HeadingPropsType): JSX.Element => {
-  const { headingLevel, children } = props;
+  const { headingLevel, dark, children } = props;
   const Title = headingLevel;
   return (
-    <StyledHeading>
+    <StyledHeading dark={dark}>
       <Title>{children}</Title>
     </StyledHeading>
   );

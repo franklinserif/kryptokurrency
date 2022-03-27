@@ -13,4 +13,5 @@ export const HeadingH1 = Template.bind({});
 HeadingH1.args = {
   children: 'Title 1',
   headingLevel: 'h1',
+  dark: true,
 };

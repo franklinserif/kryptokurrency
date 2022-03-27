@@ -7,7 +7,8 @@ type StyledButtonProps = {
     | 'secondary-button'
     | 'tertiary-button'
     | 'danger-button'
-    | 'ghost-button';
+    | 'ghost-button'
+    | 'icon-button';
 };
 
 const basicStyles = css<StyledButtonProps>`
@@ -76,6 +77,26 @@ const ghostButton = css<StyledButtonProps>`
   }
 `;
 
+const iconButton = css<StyledButtonProps>`
+  & {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  & .input-icon {
+    color: ${({ theme }) => theme.colors.gray[600]};
+  }
+
+  & .input-icon:hover {
+    color: ${({ theme }) => theme.colors.black};
+  }
+
+  & .input-icon:active {
+    transform: scale(1.2);
+  }
+`;
+
 export const StyledButton = styled.button<StyledButtonProps>`
   ${({ variant }) =>
     variant === 'primary-button'
@@ -88,5 +109,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
       ? dangerButton
       : variant === 'ghost-button'
       ? ghostButton
+      : variant === 'icon-button'
+      ? iconButton
       : primaryButton};
 `;

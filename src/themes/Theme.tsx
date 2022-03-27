@@ -7,7 +7,7 @@ import { GlobalStyles } from './GlobalStyles';
 /**
  * ThemeProviderMocs, it provide theme styles for all his childs components
  * @param {Object} props
- * @param {ReactNode} children
+ * @param {ReactNode} props.children
  * @returns {JSX.Element}
  */
 const Theme: React.FC<ThemePropsType> = ({ children }: ThemePropsType) => {

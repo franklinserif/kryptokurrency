@@ -1,13 +1,16 @@
 import React from 'react';
 import MarketInfoPropsType from './MarketInfo.type';
 import { StyledMarkInfo } from './marketinfo.styled';
+import Heading from '../Heading/Heading';
 
 const MarketInfo: React.FC<MarketInfoPropsType> = (props: MarketInfoPropsType): JSX.Element => {
-  const { title, data } = props;
+  const { title, dark, data } = props;
   return (
-    <StyledMarkInfo>
-      <h2>{title}</h2>
-      <span>{data}</span>
+    <StyledMarkInfo dark={dark}>
+      <Heading headingLevel="h2" dark={dark}>
+        title
+      </Heading>
+      <span className="data-info">{data}</span>
     </StyledMarkInfo>
   );
 };
